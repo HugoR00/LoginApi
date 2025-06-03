@@ -1,6 +1,6 @@
-package repository;
+package br.com.hugo.LoginApi.repository;
 
-import model.User;
+import br.com.hugo.LoginApi.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

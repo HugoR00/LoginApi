@@ -1,4 +1,4 @@
-package model;
+package br.com.hugo.LoginApi.model;
 
 
 import jakarta.persistence.*;
