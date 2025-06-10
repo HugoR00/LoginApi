@@ -2,15 +2,13 @@ package br.com.hugo.LoginApi.dto;
 
 
 import br.com.hugo.LoginApi.model.User;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
+@Builder
 public class UserInfo { //Uma versão segura do user, para exposição dos dados sem risco
     private Long id;
     private String username;
