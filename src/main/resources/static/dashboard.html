@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+<div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <span id="welcomeMessage">Bem-vindo!</span>
+                <button id="logoutBtn" class="logout-btn">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <div class="dashboard-grid">
+            <!-- Card de Boas-vindas -->
+            <div class="card welcome-card">
+                <h2>Bem-vindo ao Sistema</h2>
+                <p>Você está logado com sucesso!</p>
+                <div class="login-info">
+                    <p><strong>Usuário:</strong> <span id="currentUser">-</span></p>
+                    <p><strong>Último login:</strong> <span id="lastLogin">-</span></p>
+                </div>
+            </div>
+
+            <!-- Card de Estatísticas -->
+            <div class="card stats-card">
+                <h3>Estatísticas</h3>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Usuário Ativo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="sessionTime">0</span>
+                        <span class="stat-label">Minutos Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card de Ações -->
+            <div class="card actions-card">
+                <h3>Ações Disponíveis</h3>
+                <div class="actions-list">
+                    <button class="action-btn" onclick="showProfile()">
+                        👤 Ver Perfil
+                    </button>
+                    <button class="action-btn" onclick="changePassword()">
+                        🔒 Alterar Senha
+                    </button>
+                    <button class="action-btn" onclick="viewLogs()">
+                        📋 Ver Logs
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card de Informações do Sistema -->
+            <div class="card system-card">
+                <h3>Informações do Sistema</h3>
+                <div class="system-info">
+                    <p><strong>Status:</strong> <span class="status-active">Online</span></p>
+                    <p><strong>Versão:</strong> 1.0.0</p>
+                    <p><strong>Último backup:</strong> Hoje</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Modal para exibir informações -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="modalTitle">Título</h3>
+        <div id="modalBody">Conteúdo do modal</div>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
